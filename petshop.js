@@ -49,7 +49,7 @@ function addPet(tipo,nome,idade,raça,porte,sexo,vacinado,tutor) {
         porte,
         sexo,
         vacinado,
-        tutor:{
+        tutor: {
             nome: tutor,
             telefone: undefined
         }
@@ -74,7 +74,7 @@ function viewPet() {
 // Nessa função você vai receber o nome do pet como parametro lembre-se que
 // é uma string, seu trabalho é buscar esse pet dentro da nossa lista de pet, e
 // dizer se existe ou não um pet com esse nome. Lembre-se de usar o console.log
-// para dar o feedback ao usuario.
+// // para dar o feedback ao usuario.
 
 function searchPet(nomePet) {
     for (let i = 0; i < listaDeAnimais.length; i++) {
@@ -85,6 +85,8 @@ function searchPet(nomePet) {
                 console.log(`Nome do animal: ${animal.nome}`)
                 console.log(`Tipo do animal: ${animal.tipo}`)
                 console.log(`Sexo do animal: ${animal.sexo}`)
-            }
-    }
+                return
+            } 
+        }
+        console.log("Pet não cadastrado.");
 }
